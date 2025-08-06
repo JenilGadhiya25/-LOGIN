@@ -12,13 +12,18 @@
     }
   ],
   "rewrites": [
-    { 
-      "source": "/api/(.*)", 
-      "destination": "src/index.js" 
+    {
+      "source": "/api/(.*)",
+      "destination": "src/index.js"
     },
-    { 
-      "source": "/(.*)", 
-      "destination": "/dist/index.html" 
+  
+    {
+      "rewrites": [
+        {
+          "source": "/(.*)",
+          "destination": "/"
+        }
+      ]
     }
   ]
 }
